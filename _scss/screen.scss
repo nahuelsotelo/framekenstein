@@ -1,0 +1,43 @@
+@import 'partials/settings';
+@import 'partials/partials';
+
+
+/* ============== [ INDEX ] ==============
+
+0 - NORMALIZE
+
+1- BASE STYLE
+    1.1- BASE TYPOGRAPHY
+    1.2- IMAGES
+
+2 - LAYOUT
+    2.1- PAGE LAYOUT
+
+3 - BLOCKS
+
+4 - HEADER MAIN (.header-main)
+    4.1 - BRAND (.brand)
+    4.2 - MAIN NAVIGATION (.nav-main)
+
+X - HELPERS
+
+======================================== */
+
+/* =0 - NORMALIZE
+-------------------------------------------------------------------------- */
+@import "theme/normalize";
+
+
+/* =1- BASE STYLE
+-------------------------------------------------------------------------- */
+@import "theme/base";
+
+
+/* =2 - LAYOUT
+-------------------------------------------------------------------------- */
+@import "theme/layout";
+
+
+/* =4 - HEADER (.header-main)
+-------------------------------------------------------------------------- */
+@import "theme/header-main";

@@ -1,0 +1,46 @@
+/* =1.1- BASE TYPOGRAPHY
+------------------------------------------------------ */
+body {
+    color: $c-black;
+    font-family: $f-sans;
+    @include font($base-font-size);
+    line-height: $base-line-height;
+}
+h1,h2,h3,h4,h5,h6,p,ul,ol {
+    margin-top: 0;
+}
+h1,
+.f-alpha {
+
+}
+h2,
+.f-beta {
+
+}
+h3,
+.f-gamma {
+
+}
+h4,
+.f-delta {
+
+}
+h5,
+.f-epsilon {
+
+}
+h6,
+.f-zeta {
+
+}
+p {
+    
+}
+
+/* =1.2- IMAGES
+------------------------------------------------------ */
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+}
