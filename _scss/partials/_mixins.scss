@@ -42,3 +42,12 @@
     @mixin line-h($size, $multip: 1) {
         line-height: (vertical-rythm-unit() * $multip) / ($size/1px);
     }
+
+
+    @mixin position($type, $top, $right, $bottom, $left) {
+        position: $type;
+        top: $top;
+        right: $right;
+        bottom: $bottom;
+        left: $left;
+    }

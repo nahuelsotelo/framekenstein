@@ -1,10 +1,22 @@
+/* line 4, ../_scss/screen.scss */
+.foo {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  bottom: 0;
+  left: 10px;
+}
+
 /* ============== [ INDEX ] ==============
 
 0 - NORMALIZE
 
-1- BASE STYLE
-    1.1- BASE TYPOGRAPHY
+1 - BASE STYLE
+    1.1 - BASE TYPOGRAPHY
+        1.1.1 - BLOCK ELEMENTS
+        1.1.3 - INLINE ELEMENTS
     1.2- IMAGES
+    1.3 - TABLES
 
 2 - LAYOUT
     2.1- PAGE LAYOUT
@@ -16,6 +28,7 @@
     4.2 - MAIN NAVIGATION (.nav-main)
 
 X - HELPERS
+    X.1 - HIDDING STUFF
 
 ======================================== */
 /* =0 - NORMALIZE
@@ -404,9 +417,9 @@ table {
   border-spacing: 0;
 }
 
-/* =1- BASE STYLE
+/* =1 - BASE STYLE
 -------------------------------------------------------------------------- */
-/* =1.1- BASE TYPOGRAPHY
+/* =1.1 - BASE TYPOGRAPHY
 ------------------------------------------------------ */
 /* line 3, ../_scss/theme/_base.scss */
 body {
@@ -417,25 +430,70 @@ body {
   line-height: 1.1667;
 }
 
-/* line 9, ../_scss/theme/_base.scss */
+/* =1.1.1 - BLOCK ELEMENTS
+---------------------------------- */
+/* line 11, ../_scss/theme/_base.scss */
 h1, h2, h3, h4, h5, h6, p, ul, ol {
   margin-top: 0;
 }
 
-/* =1.2- IMAGES
+/* =1.1.3 - INLINE ELEMENTS
+---------------------------------- */
+/* line 44, ../_scss/theme/_base.scss */
+a {
+  margin: -0.5em;
+  padding: .5em;
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+/* line 51, ../_scss/theme/_base.scss */
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* =1.2 - IMAGES
 ------------------------------------------------------ */
-/* line 42, ../_scss/theme/_base.scss */
+/* line 59, ../_scss/theme/_base.scss */
 img {
   width: auto;
   max-width: 100%;
   height: auto;
 }
 
+/* =1.3 - TABLES
+------------------------------------------------------ */
+/* line 67, ../_scss/theme/_base.scss */
+table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
 /* =2 - LAYOUT
 -------------------------------------------------------------------------- */
+/* line 3, ../_scss/theme/_layout.scss */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 /* =2.1- PAGE LAYOUT
 ------------------------------------------------------ */
+/* =2.1.1 - CLEARFIX
+---------------------------------- */
 /* =4 - HEADER (.header-main)
+-------------------------------------------------------------------------- */
+/* =4.1 - BRAND (.brand)
+------------------------------------------------------ */
+/* =4.2 - MAIN NAVIGATION (.nav_main)
+------------------------------------------------------ */
+/* =X - HELPERS
 -------------------------------------------------------------------------- */
 /* =4.1 - BRAND (.brand)
 ------------------------------------------------------ */

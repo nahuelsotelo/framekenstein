@@ -1,14 +1,20 @@
 @import 'partials/settings';
 @import 'partials/partials';
 
+.foo {
+        @include position(absolute,0,10px,0,10px);
+}
 
 /* ============== [ INDEX ] ==============
 
 0 - NORMALIZE
 
-1- BASE STYLE
-    1.1- BASE TYPOGRAPHY
+1 - BASE STYLE
+    1.1 - BASE TYPOGRAPHY
+        1.1.1 - BLOCK ELEMENTS
+        1.1.3 - INLINE ELEMENTS
     1.2- IMAGES
+    1.3 - TABLES
 
 2 - LAYOUT
     2.1- PAGE LAYOUT
@@ -20,6 +26,7 @@
     4.2 - MAIN NAVIGATION (.nav-main)
 
 X - HELPERS
+    X.1 - HIDDING STUFF
 
 ======================================== */
 
@@ -28,7 +35,7 @@ X - HELPERS
 @import "theme/normalize";
 
 
-/* =1- BASE STYLE
+/* =1 - BASE STYLE
 -------------------------------------------------------------------------- */
 @import "theme/base";
 
@@ -39,5 +46,10 @@ X - HELPERS
 
 
 /* =4 - HEADER (.header-main)
+-------------------------------------------------------------------------- */
+@import "theme/header-main";
+
+
+/* =X - HELPERS
 -------------------------------------------------------------------------- */
 @import "theme/header-main";
