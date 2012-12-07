@@ -1,9 +1,6 @@
 @import 'partials/settings';
-@import 'partials/partials';
+@import 'partials/partials'; 
 
-.foo {
-        @include position(absolute,0,10px,0,10px);
-}
 
 /* ============== [ INDEX ] ==============
 
@@ -20,6 +17,7 @@
     2.1- PAGE LAYOUT
 
 3 - BLOCKS
+    3.1 - NAV (.nav)
 
 4 - HEADER MAIN (.header-main)
     4.1 - BRAND (.brand)
@@ -32,7 +30,7 @@ X - HELPERS
 
 /* =0 - NORMALIZE
 -------------------------------------------------------------------------- */
-@import "theme/normalize";
+//@import "theme/normalize";
 
 
 /* =1 - BASE STYLE
@@ -44,6 +42,9 @@ X - HELPERS
 -------------------------------------------------------------------------- */
 @import "theme/layout";
 
+/* =3 - BLOCKS
+-------------------------------------------------------------------------- */
+@import "blocks/nav";
 
 /* =4 - HEADER (.header-main)
 -------------------------------------------------------------------------- */
