@@ -1,0 +1,8 @@
+/* MEDIA REVERSED (.media__img--rev)
+---------------------------------- */
+// .media__img--rev reverse image location (right instead of left).
+.media__img--rev {
+    @extend .media__img;
+    float: right;
+    @include vrm(1, margin-left);
+}
