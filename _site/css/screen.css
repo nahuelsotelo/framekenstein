@@ -1,0 +1,125 @@
+/* ============== [ INDEX ] ==============
+
+0 - NORMALIZE
+
+1 - BASE STYLE
+    1.1 - BASE TYPOGRAPHY
+        1.1.1 - BLOCK ELEMENTS
+        1.1.3 - INLINE ELEMENTS
+    1.2- IMAGES
+    1.3 - TABLES
+
+2 - LAYOUT
+    2.1- PAGE LAYOUT
+
+3 - BLOCKS
+    3.1 - NAV (.nav)
+
+4 - HEADER MAIN (.header-main)
+    4.1 - BRAND (.brand)
+    4.2 - MAIN NAVIGATION (.nav-main)
+
+X - HELPERS
+    X.1 - HIDDING STUFF
+
+======================================== */
+/* =0 - NORMALIZE
+-------------------------------------------------------------------------- */
+/* =1 - BASE STYLE
+-------------------------------------------------------------------------- */
+/* =1.1 - BASE TYPOGRAPHY
+------------------------------------------------------ */
+body {
+  color: #333333;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.1667;
+}
+
+/* =1.1.1 - BLOCK ELEMENTS
+---------------------------------- */
+h1, h2, h3, h4, h5, h6, p, ul, ol {
+  margin-top: 0;
+}
+
+/* =1.1.3 - INLINE ELEMENTS
+---------------------------------- */
+a {
+  position: relative;
+  text-decoration: none;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+a:hover {
+  color: red;
+  text-decoration: underline;
+}
+
+/* =1.2 - IMAGES
+------------------------------------------------------ */
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+/* =1.3 - TABLES
+------------------------------------------------------ */
+table tr:nth-child(even) {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+/* =2 - LAYOUT
+-------------------------------------------------------------------------- */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* =2.1- PAGE LAYOUT
+------------------------------------------------------ */
+/* =2.1.1 - CLEARFIX
+---------------------------------- */
+/* =3 - BLOCKS
+-------------------------------------------------------------------------- */
+/* =3.1 - NAV (.nav)
+------------------------------------------------------ */
+.nav {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+  font-size: 0;
+}
+.nav > li {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
+.nav__label {
+  display: inline-block;
+  *display: inline;
+  zoom: 1;
+  text-decoration: none;
+}
+
+/* =4 - HEADER (.header-main)
+-------------------------------------------------------------------------- */
+/* =4.1 - BRAND (.brand)
+------------------------------------------------------ */
+/* =4.2 - MAIN NAVIGATION (.nav_main)
+------------------------------------------------------ */
+/* =X - HELPERS
+-------------------------------------------------------------------------- */
+/* =4.1 - BRAND (.brand)
+------------------------------------------------------ */
+/* =4.2 - MAIN NAVIGATION (.nav_main)
+------------------------------------------------------ */
