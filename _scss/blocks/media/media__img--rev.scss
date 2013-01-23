@@ -4,5 +4,5 @@
 .media__img--rev {
     @extend .media__img;
     float: right;
-    @include vrm(1, margin-left);
+    @include vrm(margin-left,1);
 }

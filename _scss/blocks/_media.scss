@@ -20,7 +20,7 @@
 .media__img {
     display: block;
     float: left;
-    @include vrm(1, margin-right);
+    @include vrm(margin-right,1);
 }
 
     

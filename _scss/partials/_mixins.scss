@@ -22,9 +22,24 @@
 
     // =1.2 - Vertical Rythm (rem + px)
     // ------------------------------------------------------ */
-    @mixin vrm($multip, $property:margin-bottom) {
-        #{$property}: vertical-rythm-unit() * $multip+0px;
-        #{$property}: ((vertical-rythm-unit() * $multip+0px)/16px)+0rem;
+    @mixin vrm($property:margin-bottom, $multip:1, $multip2:"", $multip3:"", $multip4:"") {
+        @if $multip2 != "" {
+            @if $multip3 != "" {
+                @if $multip4 != "" {
+                    #{$property}: (vertical-rythm-unit() * $multip+0px) (vertical-rythm-unit() * $multip2+0px) (vertical-rythm-unit() * $multip3+0px)  (vertical-rythm-unit() * $multip4+0px);
+                    #{$property}: (((vertical-rythm-unit() * $multip+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip2+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip3+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip4+0px)/16px)+0rem);
+                } @else {
+                    #{$property}: (vertical-rythm-unit() * $multip+0px) (vertical-rythm-unit() * $multip2+0px) (vertical-rythm-unit() * $multip3+0px);
+                    #{$property}: (((vertical-rythm-unit() * $multip+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip2+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip3+0px)/16px)+0rem);
+                }
+            } @else {
+                #{$property}: (vertical-rythm-unit() * $multip+0px) (vertical-rythm-unit() * $multip2+0px);
+                #{$property}: (((vertical-rythm-unit() * $multip+0px)/16px)+0rem) (((vertical-rythm-unit() * $multip2+0px)/16px)+0rem);
+            }
+        } @else {
+            #{$property}: vertical-rythm-unit() * $multip+0px;
+            #{$property}: ((vertical-rythm-unit() * $multip+0px)/16px)+0rem;
+        }
     }
 
 
