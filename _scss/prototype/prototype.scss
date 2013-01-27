@@ -1,16 +1,9 @@
-/*!
- * Bootstrap v2.2.2
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
 
 // Core variables and mixins
 @import "variables"; // Modify this for custom colors, font-sizes, etc
 @import "mixins";
+@import "partials/settings";
+@import "partials/mixins";
 
 // CSS Reset
 //@import "reset";
@@ -28,3 +21,14 @@
 
 // Components: Nav
 @import "navs";
+
+body {
+    background: $grayLight;
+    margin: 0;
+}
+.wrapper-main {
+    background: $white;
+    margin: 0 auto;
+    padding: 2em; 
+    max-width: 900px;
+}

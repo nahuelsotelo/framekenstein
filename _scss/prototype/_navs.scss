@@ -1,24 +1,23 @@
 .nav,
 .nav--banner {
-    @extend %bts-nav;
+    @extend %prot-nav;
 }
 .nav--keywords {
-    @extend %bts-nav-keywords;
+    @extend %prot-nav-keywords;
 }
 .nav--stacked {
-    @extend %bts-nav-stacked;
+    @extend %prot-nav-stacked;
 }
 //
 // Navs
 // --------------------------------------------------
-%bts-nav {
+%prot-nav {
     background-color: $bodyBackground;
 
     .nav__label {
         color: $linkColor;
-        line-height: 14px;
-        margin: 2px 2px 2px 0;
-        padding: 8px 12px;
+        @include line-h($base-font-size, 1);
+        @include vrm(padding, .25, .5);
 
         &:hover {
             background-color: $grayLighter;
@@ -33,7 +32,7 @@
         }
     }
 }
-%bts-nav-keywords {
+%prot-nav-keywords {
     .nav__label {
         color: $linkColor;
 
@@ -53,8 +52,8 @@
         }
     }
 }
-%bts-nav-stacked {
-    @extend %bts-nav;
+%prot-nav-stacked {
+    @extend %prot-nav;
 
     .nav__label {
         border-top: 1px solid #ddd;
