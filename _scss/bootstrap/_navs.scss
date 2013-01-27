@@ -1,0 +1,68 @@
+.nav,
+.nav--banner {
+    @extend %bts-nav;
+}
+.nav--keywords {
+    @extend %bts-nav-keywords;
+}
+.nav--stacked {
+    @extend %bts-nav-stacked;
+}
+//
+// Navs
+// --------------------------------------------------
+%bts-nav {
+    background-color: $bodyBackground;
+
+    .nav__label {
+        color: $linkColor;
+        line-height: 14px;
+        margin: 2px 2px 2px 0;
+        padding: 8px 12px;
+
+        &:hover {
+            background-color: $grayLighter;
+            color: $linkColorHover;
+        }
+    }
+    .is-current {
+        .nav__label,
+        .nav__label:hover {
+            background-color: $bodyBackground;
+            color: $gray;
+        }
+    }
+}
+%bts-nav-keywords {
+    .nav__label {
+        color: $linkColor;
+
+        &:hover {
+            color: $linkColorHover;
+            text-decoration: underline;
+        }
+
+    }
+    .is-current {
+        .nav__label,
+        .nav__label:hover {
+            color: $gray;
+            cursor: default;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+%bts-nav-stacked {
+    @extend %bts-nav;
+
+    .nav__label {
+        border-top: 1px solid #ddd;
+        margin: 0;
+    }
+    li:first-child {
+        .nav__label {
+            border-top: 0;
+        }
+    }
+}

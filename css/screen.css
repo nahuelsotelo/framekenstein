@@ -32,9 +32,9 @@ X - HELPERS
 body {
   color: #333333;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.1667;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.5;
 }
 
 /* =1.1.1 - BLOCK ELEMENTS
@@ -86,29 +86,71 @@ table tr:nth-child(even) {
 ------------------------------------------------------ */
 /* =2.1.1 - CLEARFIX
 ---------------------------------- */
+.nav, .nav--banner, .nav--keywords {
+  *zoom: 1;
+}
+.nav:before, .nav--banner:before, .nav--keywords:before, .nav:after, .nav--banner:after, .nav--keywords:after {
+  content: " ";
+  display: table;
+}
+.nav:after, .nav--banner:after, .nav--keywords:after {
+  clear: both;
+}
+
 /* =3 - BLOCKS
 -------------------------------------------------------------------------- */
 /* =3.1 - NAV (.nav)
 ------------------------------------------------------ */
-.nav {
+.nav, .nav--banner, .nav--keywords, .nav--stacked {
   list-style: none;
   margin-left: 0;
   padding-left: 0;
-  font-size: 0;
-}
-.nav > li {
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
-  font-size: 12px;
-  font-size: 0.75rem;
 }
 
 .nav__label {
+  display: block;
+  text-decoration: none;
+}
+.nav__label:hover {
+  text-decoration: none;
+}
+.is-current .nav__label {
+  cursor: default;
+}
+
+.nav > li, .nav--banner > li, .nav--keywords > li {
+  float: left;
+}
+
+/* NAV STACKED (.nav--stacked)
+---------------------------------- */
+/* NAV BANNER (.nav--banner)
+---------------------------------- */
+.nav--banner {
+  text-align: center;
+}
+.nav--banner > li,
+.nav--banner > li .nav__label {
   display: inline-block;
   *display: inline;
   zoom: 1;
-  text-decoration: none;
+  float: none;
+}
+
+/* NAV KEYWORDS (.nav--keywords)
+---------------------------------- */
+.nav--keywords > li {
+  display: inline;
+  float: none;
+}
+.nav--keywords > li:after {
+  content: ",\00a0";
+}
+.nav--keywords > li:last-child:after {
+  display: none;
+}
+.nav--keywords .nav__label {
+  display: inline;
 }
 
 /* =4 - HEADER (.header-main)

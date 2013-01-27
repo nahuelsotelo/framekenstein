@@ -1,29 +1,37 @@
+// <ul class="nav">
+//     <li><a href=# class="nav__label">Home</a></li>
+//     <li><a href=# class="nav__label">About</a></li>
+//     <li><a href=# class="nav__label">Portfolio</a></li>
+//     <li><a href=# class="nav__label">Contact</a></li>
+// </ul>
+
 /* =3.1 - NAV (.nav)
 ------------------------------------------------------ */
-.nav {
+%nav-base {
     list-style: none;
     margin-left: 0;
     padding-left: 0;
-    font-size: 0;
-
-    > li {
-        display: inline-block;
-        // IE7 inline-block hack 
-            *display: inline;
-            zoom: 1;
-        font-size: $base-font-size;
-        font-size: $base-font-size-rem;
-    }
 }
 .nav__label {
-    display: inline-block;
-        // IE7 inline-block hack 
-            *display: inline;
-            zoom: 1;
+    display: block;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+    }
+    .is-current & {
+        cursor: default;
+    }
+}
+.nav {
+    @extend %nav-base;
+    @extend %cf;
+
+    > li {
+        float: left;
+    }
 }
 
-// @import "nav/_nav--stacked";
-// @import "nav/_nav--banner";
-// @import "nav/_nav--fit";
-// @import "nav/_nav--keywords";
+@import "nav/_nav--stacked";
+@import "nav/_nav--banner";
+@import "nav/_nav--keywords";

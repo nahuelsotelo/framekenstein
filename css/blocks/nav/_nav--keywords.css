@@ -1,0 +1,15 @@
+/* NAV KEYWORDS (.nav--keywords)
+---------------------------------- */
+.nav--keywords > li {
+  display: inline;
+  float: none;
+}
+.nav--keywords > li:after {
+  content: ",\00a0";
+}
+.nav--keywords > li:last-child:after {
+  display: none;
+}
+.nav--keywords .nav__label {
+  display: inline;
+}

@@ -11,4 +11,15 @@
 .nav--banner {
     @extend .nav;
     text-align: center;
+
+    > li {
+        &,
+        .nav__label {
+            display: inline-block;
+                // IE hack
+               *display: inline;
+                zoom: 1;
+            float: none;
+        }
+    }
 }
