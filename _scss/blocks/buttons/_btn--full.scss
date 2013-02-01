@@ -3,11 +3,10 @@
 // .btn--full extends .btn and centres a full size button with the text center-aligned.
 
 .btn--full {
-	@extend .btn;
+	@extend %btn-base;
     display: block;
     text-align: center;
     /* The following is so that .btn--full works properly on <input>`s as well as <a>`s. */
-    padding-right: 0;
-    padding-left:  0;
+    padding: 0.5em 0;
     width: 100%;
 }

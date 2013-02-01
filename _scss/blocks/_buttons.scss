@@ -3,24 +3,33 @@
 //  Basic button structural styling. Extend in your theme stylesheet.
 //
 //  Demo: jsfiddle.net/inuitcss/RqHcp
-
-.btn {
+%btn-base {
     font: inherit;
     cursor: pointer;
     border: none;
-    display: inline-block;
     margin:  0;
     line-height: 1;
+    text-align: center;
     /**
      * Set padding in ems so we can change the size of a button by merely
      * altering its `font-size`.
      */
-    padding: 0.5em;
-
+    
     &,
     &:hover {
         text-decoration: none;
     }
+}
+
+button,
+input[type="submit"],
+.btn {
+    display: inline-block;
+        // IE hack
+        *display: inline;
+        zoom: 1;
+    padding: 0.5em;
+    @extend %btn-base;
 }
 
 @import "buttons/btn--full";
